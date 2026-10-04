@@ -7,7 +7,8 @@
     "dev": "vite --host 0.0.0.0 --port 62024",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 62024",
-    "check": "tsc -b --pretty false"
+    "check": "tsc -b --pretty false",
+    "test:engine": "esbuild scripts/engine.test.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/recon-test.mjs --log-level=warning && node node_modules/.cache/recon-test.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
